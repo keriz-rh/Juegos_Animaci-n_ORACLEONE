@@ -1,5 +1,5 @@
 # Juegos-y-animaci-nes.
-Practicando Lógica de programación.
-<br>
-[Canva Crepper] (https://github.com/Kerizr/Juegos-y-animaci-nes./blob/main/Creeper.html)
-(https://github.com/Kerizr/Juegos-y-animaci-nes./blob/main/creeper.png)
+Practicando Lógica de programación, con animación y juegos.
+
+[Canva Crepper](https://github.com/Kerizr/Juegos-y-animaci-nes./blob/main/Creeper.html)
+![png](https://github.com/Kerizr/Juegos-y-animaci-nes./blob/main/creeper.png)
