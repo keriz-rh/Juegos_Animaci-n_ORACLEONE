@@ -16,4 +16,4 @@ Principiante en Programación G5 - ONE
 
 
 //el programa tiene que mostrar un mensaje con la hora actual en el siguiente formato HH:MM:SS y con las coordenadas (x,y) cuando el usuario haga clic en la pantalla.
-![Asociando eventos con funciones](https://github.com/Kerizr/Juegos_Animaci-n_ORACLEONE/blob/main/eventos_funciones.html)
+[Asociando eventos con funciones](https://github.com/Kerizr/Juegos_Animaci-n_ORACLEONE/blob/main/eventos_funciones.html)
