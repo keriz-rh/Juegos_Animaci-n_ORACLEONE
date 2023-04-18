@@ -1,0 +1,43 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    // Función para dibujar un rectángulo en el canvas
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle = color; // Establecer el color de relleno
+        pincel.fillRect(x, y, base, altura); // Dibujar el rectángulo relleno
+        pincel.strokeStyle = "black"; // Establecer el color de borde
+        pincel.strokeRect(x, y, base, altura); // Dibujar el borde del rectángulo
+    }
+
+    // Función para escribir texto en el canvas
+    function escribirTexto(x, y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font = "15px Georgia"; // Establecer la fuente y tamaño del texto
+        pincel.fillStyle = "black"; // Establecer el color del texto
+        pincel.fillText(texto, x, y); // Escribir el texto en las coordenadas especificadas
+    }
+
+    // Función para dibujar una barra en el canvas
+    function dibujarBarra(x, y, serie, colores, texto) {
+        escribirTexto(x, y - 10, texto); // Escribir el texto de la etiqueta encima de la barra
+
+        var sumaAltura = 0;
+        for (var i = 0; i < serie.length; i++) {
+            var altura = serie[i];
+            dibujarRectangulo(x, y + sumaAltura, 50, altura, colores[i]); // Dibujar el rectángulo de la barra
+            sumaAltura = sumaAltura + altura;
+        }
+    }
+
+    var colores = ["blue", "green", "yellow", "red", "gray"];
+    var serie2009 = [6, 47, 41, 3, 3];
+    var serie2019 = [81, 9, 3, 3, 4];
+
+    dibujarBarra(50, 50, serie2009, colores, "2009"); // Dibujar la barra para el año 2009
+    dibujarBarra(150, 50, serie2019, colores, "2019"); // Dibujar la barra para el año 2019
+</script>
