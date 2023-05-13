@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+    alert("Bienvenido a Alura cuenta con tres intentos para iniciar sesión.");
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+
+    var intentos = 3;
+    var contador = 1;
+
+     while (contador <= intentos){
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+             alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+             break;
+        } else {
+                alert("inicio de sesión inválido. Intento # " + contador);
+                        }
+        contador++
+        if (contador > intentos){
+            alert("¡Tres Intentos fallidos. Se ha alertado de su intento de inicio de sesión a los administradores del sitio y al correo registrado!");
+        }
+
+    }
+    
+</script>

@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+<h1>***Juego***</h1> 
+<br><hr>
+<h1>Adivina el numero secreto entre uno y diez.</h1>
+
+<input/>
+<button>Verificar si acertó con el secreto.</button>
+
+<script>
+// Función que genera un número aleatorio entre 0 y 10
+function aleatorio() {
+	return Math.round(Math.random()*10);
+}
+
+// Función que genera un arreglo de números aleatorios no repetidos
+function sortearNumeros(cantidad){
+
+	// Arreglo vacío que almacenará los números aleatorios
+	var secretos = [];
+	// Variable que llevará la cuenta de cuántos números se han generado
+	var contador = 1;
+
+	// Mientras no se hayan generado suficientes números
+	while(contador <= cantidad){
+		// Generar un número aleatorio
+		numeroAleatorio = aleatorio()
+		// Mostrar el número generado en la consola
+		console.log(numeroAleatorio);
+		// Variable que indica si el número generado ya está en el arreglo
+		var encontrado = false
+
+		// Si el número generado no es cero, buscar si ya está en el arreglo
+		if (numeroAleatorio != 0) {
+			for(var posicion = 0; posicion < secretos.length; posicion++){
+				if (numeroAleatorio == secretos[posicion]){
+					// Si ya está en el arreglo, marcarlo como encontrado y salir del ciclo
+					encontrado = true;
+					break;
+				}
+			}
+		}
+
+		// Si no se encontró el número en el arreglo, agregarlo y aumentar el contador
+		if(encontrado == false) {
+			secretos.push(numeroAleatorio);
+			contador++;
+		}
+	}
+
+	// Devolver el arreglo con los números aleatorios generados
+	return secretos
+}
+
+// Generar el arreglo de números aleatorios
+var secreto = sortearNumeros(4);
+// Mostrar el arreglo generado en la consola
+console.log(secreto)
+
+// Seleccionar el elemento input del HTML y darle el foco
+var input = document.querySelector("input");
+input.focus();
+
+// Función que verifica si el número ingresado es uno de los números aleatorios
+function verificar() {
+	var encontrado
+	for(var posicion = 0; posicion < secreto.length; posicion++){
+		if (parseInt(input.value) == secreto[posicion]) {
+			// Si se encuentra el número, mostrar un mensaje y marcarlo como encontrado
+			alert("Usted acertó el numero");
+			encontrado = true;
+			break;
+		}
+	}
+	// Si no se encontró el número, mostrar un mensaje de error
+	if (encontrado != true){
+		alert("Usted erró");
+	}
+	// Limpiar el input y volver a darle el foco
+	input.value = "";
+	input.focus();
+}
+
+// Seleccionar el botón del HTML y asociarle la función verificar al evento onclick
+var button = document.querySelector("button")
+button.onclick = verificar;
+
+</script>
