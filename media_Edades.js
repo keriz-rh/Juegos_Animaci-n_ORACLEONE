@@ -1,7 +1,4 @@
-<meta charset="UTF-8">
- <h1>Media de las edades de una familia</h1>
-<script>
-	
+
 	function saltarLinea(){
 		document.write("<br>", "<hr>", "<hr>")
 	}
@@ -28,6 +25,3 @@
 
 imprimir("media de edades " + mediaEdades);
 imprimir("fin")
-
-
-	</script>
