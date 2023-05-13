@@ -1,8 +1,3 @@
-<meta charset="UTF-8">
-
-<h1>Recetas de Armando </h1>
-
-<script>
 
   var ingredientes = [];
   var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
@@ -24,4 +19,3 @@
     }
   }
   console.log(ingredientes);
-</script>
