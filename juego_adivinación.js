@@ -1,14 +1,4 @@
-<head>
-	<meta charset="UTF-8">
-	<title>Juego</title>
-</head>
 
-<body>
-	<header>
-		<h1>Juego de adivinanza</h1>
-		<br>
-	</header>
- <script>
  	function saltarlinea() {
  		document.write("<br>");
  		document.write("<br><hr>");
@@ -54,4 +44,4 @@
  	}
  	imprimir("fin");
 }
- </script>
+
