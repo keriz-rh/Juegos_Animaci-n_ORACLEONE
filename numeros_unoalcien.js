@@ -1,7 +1,4 @@
-<meta charset="UTF-8">
-<h1>Numeros del uno al cien con la función while</h1> 
 
- <script>
  
 	function imprimir(frase){
 		document.write(frase + ", ");
@@ -25,4 +22,3 @@
 	// Llamar a la función imprimir() para imprimir la palabra "FIN"
 	imprimir("FIN");
 
-</script>
